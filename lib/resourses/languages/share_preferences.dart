@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names, no_leading_underscores_for_local_identifiers
+
 import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -23,11 +25,11 @@ Future<Locale> getLocale() async {
 _locale(String langCode) {
   switch (langCode) {
     case ENGLISH:
-      return Locale(ENGLISH);
+      return const Locale(ENGLISH);
     case ARABIC:
-      return Locale(ARABIC);
+      return const Locale(ARABIC);
     default:
-      return Locale(ENGLISH);
+      return const Locale(ENGLISH);
   }
 }
 

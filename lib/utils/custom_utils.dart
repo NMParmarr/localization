@@ -7,15 +7,17 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class Utils extends AppBar {
+  Utils({super.key});
+
   static AppBar appbar(context) => AppBar(
         backgroundColor: Colors.tealAccent,
         title: MyText(text: AppLocalizations.of(context)!.appbarTitle),
         centerTitle: true,
         actions: [
           Padding(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             child: DropdownButton<Language>(
-                icon: Icon(
+                icon: const Icon(
                   Icons.language,
                   color: Colors.black,
                 ),

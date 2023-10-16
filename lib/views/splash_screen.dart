@@ -16,10 +16,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState() {
-    Timer(Duration(seconds: 1), () {
+    Timer(const Duration(seconds: 1), () {
       Provider.of<SplashIconProvider>(context, listen: false).increseRadius();
     });
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacementNamed(context, RouteGenerator.homePage);
     });
     super.initState();
@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AnimatedContainer(
-        duration: Duration(seconds: 9),
+        duration: const Duration(seconds: 9),
         child: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
