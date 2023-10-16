@@ -14,18 +14,36 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: Utils.appbar,
+        drawer: Drawer(),
         body: Container(
-          color: Colors.teal,
-          child: Center(
-              child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          padding: EdgeInsets.all(20),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MyText(
                 text: "Neon Parmar",
                 fontSize: 20,
               ),
+              MyText(
+                text: "Neon Parmar",
+                fontSize: 20,
+              ),
+              MyText(
+                text: "Neon Parmar",
+                fontSize: 20,
+              ),
+              OutlinedButton(
+                  onPressed: () {
+                    showDialog(
+                        context: context,
+                        builder: (_) => DatePickerDialog(
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(2000),
+                            lastDate: DateTime(2024)));
+                  },
+                  child: MyText(text: "Choose Date"))
             ],
-          )),
+          ),
         ));
   }
 }
