@@ -1,5 +1,6 @@
 {
     "name" : "اسم",
     "neonParmar" : "نيون بارمار",
-    "chooseDate" : "اختر موعدا"
+    "chooseDate" : "اختر موعدا",
+    "appbarTitle" : "الموقع"
 }

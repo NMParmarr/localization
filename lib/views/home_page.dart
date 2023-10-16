@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:localization/resourses/languages/share_preferences.dart';
 import 'package:localization/utils/custom_utils.dart';
 import 'package:localization/utils/my_text_util.dart';
 
@@ -10,26 +11,27 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: Utils.appbar,
+        appBar: Utils.appbar(context),
         drawer: Drawer(),
         body: Container(
           padding: EdgeInsets.all(20),
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MyText(
-                text: "Neon Parmar",
+                text: tr(context).appbarTitle,
                 fontSize: 20,
               ),
               MyText(
-                text: "Neon Parmar",
+                text: tr(context).neonParmar,
                 fontSize: 20,
               ),
               MyText(
-                text: "Neon Parmar",
+                text: tr(context).neonParmar,
                 fontSize: 20,
               ),
               OutlinedButton(
@@ -41,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                             firstDate: DateTime(2000),
                             lastDate: DateTime(2024)));
                   },
-                  child: MyText(text: "Choose Date"))
+                  child: MyText(text: tr(context).chooseDate))
             ],
           ),
         ));

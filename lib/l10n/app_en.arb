@@ -1,5 +1,6 @@
 {
     "name" : "Name",
     "neonParmar" : "Neon Parmar",
-    "chooseDate" : "Choose Date"
+    "chooseDate" : "Choose Date",
+    "appbarTitle" : "Localization"
 }
